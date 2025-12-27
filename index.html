@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title>DIV Office</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&family=Vazirmatn:wght@300;500;600&display=swap');
 <style>
 .logo-img {
   width: 110px;
@@ -15,19 +15,72 @@
   padding: 10px 14px;
   border-radius: 18px;
   box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+  
+}.lang-switch {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  font-size: 12px;
+  cursor: pointer;
+  opacity: 0.7;
+}
+.lang-switch span {
+  margin: 0 6px;
+}
+.lang-switch .active {
+  font-weight: 600;
+  opacity: 1;
 }
 
+.en { font-family: 'Poppins', sans-serif; }
+.fa { font-family: 'Vazirmatn', sans-serif; direction: rtl; }
+
+.hidden { display: none; }
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&family=Vazirmatn:wght@300;500;600&display=swap');
+  <script>
+function setLang(lang) {
+  document.getElementById('en').classList.toggle('hidden', lang !== 'en');
+  document.getElementById('fa').classList.toggle('hidden', lang !== 'fa');
+
+  document.getElementById('enBtn').classList.toggle('active', lang === 'en');
+  document.getElementById('faBtn').classList.toggle('active', lang === 'fa');
+}
+</script>
 body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background: #ffffff;
-  color: #000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
+  <div class="lang-switch">
+  <span id="enBtn" class="active" onclick="setLang('en')">EN</span> |
+  <span id="faBtn" onclick="setLang('fa')">FA</span>
+</div>
 
+<div class="card">
+
+  <img src="logo.png" alt="DIV Office Logo" class="logo-img">
+
+  <!-- English -->
+  <div id="en" class="en">
+    <h1>DIV Office</h1>
+    <div class="subtitle">Architecture · Art · Lifestyle</div>
+
+    <a href="https://instagram.com/div.office">Instagram</a>
+    <a href="tel:+989125538853">Call</a>
+    <a href="https://t.me/mansureslami">Telegram</a>
+    <a href="mailto:mansureslami.arch@gmail.com">Email</a>
+  </div>
+
+  <!-- Persian -->
+  <div id="fa" class="fa hidden">
+    <h1>دفتر طراحی DIV</h1>
+    <div class="subtitle">معماری · هنر · سبک زندگی</div>
+
+    <a href="https://instagram.com/div.office">اینستاگرام</a>
+    <a href="tel:+989125538853">تماس</a>
+    <a href="https://t.me/mansureslami">تلگرام</a>
+    <a href="mailto:mansureslami.arch@gmail.com">ایمیل</a>
+  </div>
+
+</div>
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&family=Vazirmatn:wght@300;500;600&display=swap');
 .card {
   background: #ffffff;
   border-radius: 24px;
@@ -38,7 +91,7 @@ body {
   box-shadow: 0 20px 60px rgba(0,0,0,0.12);
   border: 1px solid rgba(0,0,0,0.08);
 }
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&family=Vazirmatn:wght@300;500;600&display=swap');
 .logo {
   width: 90px;
   height: 90px;
@@ -51,7 +104,7 @@ body {
   font-weight: 600;
   letter-spacing: 2px;
 }
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&family=Vazirmatn:wght@300;500;600&display=swap');
 h1 {
   margin: 10px 0 4px;
   font-size: 26px;
