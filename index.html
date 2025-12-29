@@ -2,218 +2,157 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>DIV Office</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&family=Vazirmatn:wght@300;500;600&display=swap');
+<title>DIV Office</title>
+
 <style>
-  <head>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&family=Vazirmatn:wght@300;500;600&display=swap');
-  </style>
-</head>
-  .logo-img {
-  width: 110px;
-  height: auto;
-  margin: 0 auto 18px;
-  display: block;
-  background: #fff;
-  padding: 10px 14px;
-  border-radius: 18px;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.6);
-  
-}.lang-switch {
-  position: absolute;
-  top: 18px;
-  right: 18px;
-  font-size: 12px;
-  cursor: pointer;
-  opacity: 0.7;
-}
-.lang-switch span {
-  margin: 0 6px;
-}
-.lang-switch .active {
-  font-weight: 600;
-  opacity: 1;
-}
-
-.en { font-family: 'Poppins', sans-serif; }
-.fa { font-family: 'Vazirmatn', sans-serif; direction: rtl; }
-
-.hidden { display: none; }
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&family=Vazirmatn:wght@300;500;600&display=swap');
-  <script>
-function setLang(lang) {
-  document.getElementById('en').classList.toggle('hidden', lang !== 'en');
-  document.getElementById('fa').classList.toggle('hidden', lang !== 'fa');
 
-  document.getElementById('enBtn').classList.toggle('active', lang === 'en');
-  document.getElementById('faBtn').classList.toggle('active', lang === 'fa');
-}
-</script>
 body {
-  <div class="lang-switch">
-  <span id="enBtn" class="active" onclick="setLang('en')">EN</span> |
-  <span id="faBtn" onclick="setLang('fa')">FA</span>
-</div>
-
-<div class="card">
-
-  <img src="logo.png" alt="DIV Office Logo" class="logo-img">
-
-  <!-- English -->
-  <div id="en" class="en">
-    <h1>DIV Office</h1>
-    <div class="subtitle">Architecture · Art · Lifestyle</div>
-
-    <a href="https://instagram.com/div.office">Instagram</a>
-    <a href="tel:+989125538853">Call</a>
-    <a href="https://t.me/mansureslami">Telegram</a>
-    <a href="mailto:mansureslami.arch@gmail.com">Email</a>
-  </div>
-
-  <!-- Persian -->
-  <div id="fa" class="fa hidden">
-    <h1>دفتر طراحی DIV</h1>
-    <div class="subtitle">معماری · هنر · سبک زندگی</div>
-
-    <a href="https://instagram.com/div.office">اینستاگرام</a>
-    <a href="tel:+989125538853">تماس</a>
-    <a href="https://t.me/mansureslami">تلگرام</a>
-    <a href="mailto:mansureslami.arch@gmail.com">ایمیل</a>
-  </div>
-
-</div>
-}
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&family=Vazirmatn:wght@300;500;600&display=swap');
-.card {
-  background: #ffffff;
-  border-radius: 24px;
-  padding: 36px 28px;
-  width: 92%;
-  max-width: 390px;
-  text-align: center;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.12);
-  border: 1px solid rgba(0,0,0,0.08);
-}
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&family=Vazirmatn:wght@300;500;600&display=swap');
-.logo {
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
-  margin: 0 auto 16px;
-  border: 2px solid #e5c27b;
+  margin: 0;
+  min-height: 100vh;
   display: flex;
-  align-items: center;
   justify-content: center;
-  font-weight: 600;
-  letter-spacing: 2px;
+  align-items: center;
+  background: #ffffff;
 }
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&family=Vazirmatn:wght@300;500;600&display=swap');
+
+.card {
+  width: 360px;
+  background: #fff;
+  padding: 28px 24px;
+  border-radius: 28px;
+  text-align: center;
+  box-shadow: 0 20px 45px rgba(0,0,0,0.12);
+  animation: fadeUp 0.8s ease forwards;
+}
+
+@keyframes fadeUp {
+  from {opacity:0; transform:translateY(20px);}
+  to {opacity:1; transform:translateY(0);}
+}
+
+.logo {
+  width: 120px;
+  border-radius: 22px;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.2);
+  margin-bottom: 18px;
+}
+
 h1 {
-  margin: 10px 0 4px;
+  margin: 6px 0 4px;
   font-size: 26px;
   letter-spacing: 2px;
 }
 
 .subtitle {
-  font-size: 13px;
-  opacity: 0.8;
-  margin-bottom: 26px;
+  font-size: 14px;
+  opacity: 0.7;
+  margin-bottom: 20px;
 }
 
-a {
+.btn {
   display: block;
-  margin: 14px 0;
-  padding: 15px;
+  margin: 12px 0;
+  padding: 14px;
   border-radius: 16px;
   text-decoration: none;
   color: #000;
-  background: linear-gradient(135deg, #e5c27b, #c9a24d);
   font-weight: 500;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background: linear-gradient(135deg, #e6c36a, #cfa44a);
+  box-shadow: 0 8px 18px rgba(207,164,74,0.35);
+  transition: 0.25s;
 }
 
-a:hover {
+.btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 30px rgba(229,194,123,0.4);
+  box-shadow: 0 14px 28px rgba(207,164,74,0.45);
 }
 
 .footer {
-  margin-top: 22px;
-  font-size: 11px;
-  opacity: 0.6;
-  letter-spacing: 1px;
+  margin-top: 18px;
+  font-size: 12px;
+  opacity: 0.5;
+}
+
+/* Language */
+.lang {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+.lang span {
+  cursor: pointer;
+  margin: 0 6px;
+}
+
+.active {
+  font-weight: 600;
+  opacity: 1;
+}
+
+/* FA mode */
+body.fa {
+  direction: rtl;
+  font-family: 'Vazirmatn', sans-serif;
+}
+
+body.fa .lang {
+  left: 20px;
+  right: auto;
 }
 </style>
 </head>
 
 <body>
-  body {
-  background: #ffffff;
+
+<div class="lang">
+  <span class="active" onclick="setLang('en')">EN</span> |
+  <span onclick="setLang('fa')">FA</span>
+</div>
+
+<div class="card">
+  <img src="logo.png" class="logo" alt="DIV Office">
+
+  <h1 id="title">DIV Office</h1>
+  <div class="subtitle" id="subtitle">Architecture & Design</div>
+
+  <a class="btn" id="btn1" href="https://instagram.com/div.office">Instagram</a>
+  <a class="btn" id="btn2" href="tel:09125538853">Call</a>
+  <a class="btn" id="btn3" href="https://t.me/mansureslami">Telegram</a>
+  <a class="btn" id="btn4" href="mailto:mansureslami.arch@gmail.com">Email</a>
+
+  <div class="footer" id="footer">Luxury Design Studio</div>
+</div>
+
+<script>
+function setLang(lang) {
+  document.body.className = lang;
+  document.querySelectorAll('.lang span').forEach(s=>s.classList.remove('active'));
+  document.querySelector('.lang span[onclick="setLang(\\''+lang+'\\')"]').classList.add('active');
+
+  if(lang === 'fa') {
+    title.innerText = 'دفتر طراحی DIV';
+    subtitle.innerText = 'معماری و طراحی';
+    btn1.innerText = 'اینستاگرام';
+    btn2.innerText = 'تماس';
+    btn3.innerText = 'تلگرام';
+    btn4.innerText = 'ایمیل';
+    footer.innerText = 'استودیو طراحی لوکس';
+  } else {
+    title.innerText = 'DIV Office';
+    subtitle.innerText = 'Architecture & Design';
+    btn1.innerText = 'Instagram';
+    btn2.innerText = 'Call';
+    btn3.innerText = 'Telegram';
+    btn4.innerText = 'Email';
+    footer.innerText = 'Luxury Design Studio';
+  }
 }
+</script>
 
-.card {
-  background: rgba(255,255,255,0.95);
-  backdrop-filter: blur(10px);
-  border-radius: 28px;
-  box-shadow:
-    0 20px 40px rgba(0,0,0,0.12),
-    inset 0 1px 0 rgba(255,255,255,0.6);
-}
-  <div class="card">
-    <img src="logo.png" alt="DIV Office Logo" class="logo-img">
-
-    <h1>DIV Office</h1>
-    <div class="subtitle">Architecture & Design</div>
-
-    <a href="https://instagram.com/div.office">Instagram</a>
-    <a href="tel:+989125538853">Call</a>
-    <a href="https://t.me/mansureslami">Telegram</a>
-    <a href="mailto:mansureslami.arch@gmail.com">Email</a>
-
-    <div class="footer">Luxury Design Studio</div>
-  </div>
 </body>
 </html>
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px) scale(0.98);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-}
-
-.card {
-  animation: fadeUp 0.9s ease-out forwards;
-}
-a {
-  background: linear-gradient(135deg, #e3c16f, #cfa44a);
-  box-shadow: 0 8px 18px rgba(207,164,74,0.35);
-  transition: all 0.25s ease;
-}
-
-a:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 26px rgba(207,164,74,0.45);
-}
-.lang-switch {
-  position: absolute;
-  top: 16px;
-  right: 18px;
-  font-size: 11px;
-  letter-spacing: 1px;
-  opacity: 0.6;
-}
-.lang-switch .active {
-  opacity: 1;
-  font-weight: 600;
-}
-.logo-img {
-  width: 120px;
-  border-radius: 22px;
-  box-shadow: 0 10px 24px rgba(0,0,0,0.18);
-}
