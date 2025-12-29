@@ -26,6 +26,59 @@ body {
   box-shadow: 0 20px 45px rgba(0,0,0,0.12);
   animation: fadeUp 0.8s ease forwards;
 }
+  /* ===== PRINT BUSINESS CARD (DOUBLE SIDE) ===== */
+@media print {
+  body {
+    background: #fff;
+  }
+
+  .screen-only {
+    display: none !important;
+  }
+
+  .print-card {
+    width: 85mm;
+    height: 55mm;
+    page-break-after: always;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+
+  /* FRONT */
+  .card-front {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .card-front img {
+    width: 34mm;
+    margin-bottom: 5mm;
+  }
+
+  .card-front h1 {
+    font-size: 15pt;
+    margin: 2mm 0;
+  }
+
+  .card-front .subtitle {
+    font-size: 9pt;
+  }
+
+  /* BACK */
+  .card-back {
+    flex-direction: column;
+    font-size: 8pt;
+    line-height: 1.6;
+    text-align: center;
+  }
+
+  .qr {
+    width: 26mm;
+    margin-bottom: 4mm;
+  }
+}
 
 @keyframes fadeUp {
   from {opacity:0; transform:translateY(20px);}
@@ -126,6 +179,25 @@ body.fa .lang {
   <a class="btn" id="btn4" href="mailto:mansureslami.arch@gmail.com">Email</a>
 
   <div class="footer" id="footer">Luxury Design Studio</div>
+</div>
+  <!-- PRINT FRONT -->
+<div class="print-card card-front">
+  <img src="logo.png" alt="DIV Office Logo">
+  <h1>DIV Office</h1>
+  <div class="subtitle">
+    Architecture • Art • Lifestyle<br>
+    Design Office
+  </div>
+</div>
+
+<!-- PRINT BACK -->
+<div class="print-card card-back">
+  <img src="qr.png" class="qr" alt="QR Code">
+  <div>@div.office</div>
+  <div>+98 912 553 8853</div>
+  <div>t.me/mansureslami</div>
+  <div>mansureslami.arch@gmail.com</div>
+  <div>divoffice.github.io</div>
 </div>
 
 <script>
